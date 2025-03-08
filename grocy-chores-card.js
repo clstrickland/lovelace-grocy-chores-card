@@ -698,7 +698,7 @@ class GrocyChoresCard extends LitElement {
         this.local_cached_hidden_items.push(`chore${choreId}`);
         this.requestUpdate();
         this._hass.callService("grocy", "execute_chore", {
-            chore_id: choreId, done_by_id: this._hass?.user?.id
+            chore_id: choreId, done_by_hass_user_id: this._hass?.user?.id
         });
         this._showTrackedToast(choreName);
     }
